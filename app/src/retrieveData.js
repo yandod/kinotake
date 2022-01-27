@@ -15,7 +15,7 @@ const targets = [
     {id:'kinoko', keyword:'きのこの山'},
     {id:'takenoko', keyword:'たけのこの里'},
     {id:'emacs', keyword:'emacs'},
-    {id:'vimm', keyword:'vimm'},
+    {id:'vim', keyword:'vim'},
 ]
 
 async function getRequest(target) {
