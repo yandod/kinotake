@@ -13,6 +13,7 @@
     "@types/node": "^16.11.21",
     "@types/react": "^17.0.38",
     "@types/react-dom": "^17.0.11",
+    "apexcharts": "^3.33.0",
     "needle": "^3.0.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
