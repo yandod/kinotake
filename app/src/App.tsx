@@ -89,15 +89,15 @@ function App() {
       <Box sx={{ width: '100%', typography: 'body1' }}>
         <TabContext value={value}>
           <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
-            <TabList onChange={handleChange} aria-label="lab API tabs example">
-              <Tab label="Kinoko vs Takenoko" value="1" />
-              <Tab label="Kinoko vs Takenoko (time)" value="2" />
-              <Tab label="Emacs vs Vim" value="3" />
+            <TabList onChange={handleChange} aria-label="lab API tabs example" scrollButtons={true} allowScrollButtonsMobile>
+              <Tab label="Kinoko vs Takenoko" value="1" wrapped/>
+              <Tab label="Kinoko vs Takenoko (time)" value="2" wrapped/>
+              <Tab label="Emacs vs Vim" value="3" wrapped/>
             </TabList>
           </Box>
           <TabPanel value="1">
             <Paper>
-              <Chart options={options.kinotake} series={series.kinotake} legend={legend} type="donut" width="50%" />
+              <Chart options={options.kinotake} series={series.kinotake} legend={legend} type="donut" width="100%" height="300px"/>
             </Paper>
           </TabPanel>
           <TabPanel value="2">
