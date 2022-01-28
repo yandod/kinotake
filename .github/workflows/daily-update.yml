@@ -20,6 +20,8 @@ jobs:
         node-version: 17
   
     - name: update data
+      env:
+        BEARER_TOKEN: ${{ secrets.BEARER_TOKEN }}
       run: |
         cd app
         npm install
