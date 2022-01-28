@@ -24,20 +24,15 @@ jobs:
         cd app
         npm install
         node ./src/retrieveData.js
-        git add ./src/data
-        git commit -m "update data"
-        git push origin
 
-    - name: Build site
-      run: |
-        cd app
-        npm install
-        npm run build
-
-    - name: Deploy to pages
-      uses: peaceiris/actions-gh-pages@v3
-      if: ${{ github.ref == 'refs/heads/master' }}
+    - name: Simple commit
+      uses: zwaldowski/git-commit-action@v1
       with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ./app/build
-
+        # Directory to create commit in
+        working_directory: # optional, default is .
+        # Commit message
+        commit_message: # default is Automated commit
+        # Name to use for commit author
+        author_name: # optional, default is GitHub Actions
+        # Email to use for commit author
+        author_email: # optional, default is actions@github.com
