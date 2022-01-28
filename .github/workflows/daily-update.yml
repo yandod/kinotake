@@ -1,0 +1,42 @@
+name: Lint Code Base
+
+on:
+  schedule:
+    - cron:  '45 14 * * *'
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    concurrency:
+      group: ${{ github.workflow }}-${{ github.ref }}
+    
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Use Node.js
+      uses: actions/setup-node@v1
+      with:
+        node-version: 17
+  
+    - name: update data
+      run: |
+        cd app
+        npm install
+        node ./src/retrieveData.js
+        git add ./src/data
+        git commit -m "update data"
+        git push origin
+
+    - name: Build site
+      run: |
+        cd app
+        npm install
+        npm run build
+
+    - name: Deploy to pages
+      uses: peaceiris/actions-gh-pages@v3
+      if: ${{ github.ref == 'refs/heads/master' }}
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./app/build
+
