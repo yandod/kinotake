@@ -27,3 +27,6 @@ jobs:
 
     - name: Simple commit
       uses: zwaldowski/git-commit-action@v1
+    
+    - name: action-push
+      uses: ludeeus/action-push@0.0.1
