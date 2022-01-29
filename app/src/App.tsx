@@ -89,7 +89,7 @@ function App() {
       <Box sx={{ width: '100%', typography: 'body1' }}>
         <TabContext value={value}>
           <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
-            <TabList onChange={handleChange} aria-label="lab API tabs example" scrollButtons={true} allowScrollButtonsMobile>
+            <TabList onChange={handleChange} aria-label="lab API tabs example" scrollButtons={true} allowScrollButtonsMobile={true}>
               <Tab label="Kinoko vs Takenoko" value="1" wrapped/>
               <Tab label="Kinoko vs Takenoko (time)" value="2" wrapped/>
               <Tab label="Emacs vs Vim" value="3" wrapped/>
@@ -107,7 +107,7 @@ function App() {
           </TabPanel>
           <TabPanel value="3">
             <Paper>
-              <Chart options={options.editor} series={series.editor} legend={legend} type="donut" width="400" />
+              <Chart options={options.editor} series={series.editor} legend={legend} type="donut" width="100%" height="300px"/>
             </Paper>
           </TabPanel>
         </TabContext>
