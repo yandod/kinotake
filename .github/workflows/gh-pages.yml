@@ -3,8 +3,9 @@ name: build site and push to gh-pages
 on:
   push:
     branches: [ master ]
-  pull_request:
-
+  schedule:
+    - cron:  '45 14 * * *'
+  workflow_dispatch:
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -19,6 +20,14 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: 17
+    
+    - name: update data
+      env:
+        BEARER_TOKEN: ${{ secrets.BEARER_TOKEN }}
+      run: |
+        cd app
+        npm install
+        node ./src/retrieveData.js
 
     - name: Build site
       run: |
