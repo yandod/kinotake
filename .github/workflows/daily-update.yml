@@ -1,8 +1,6 @@
 name: Daily Update
 
 on:
-  schedule:
-    - cron:  '45 14 * * *'
   workflow_dispatch:
 jobs:
   build:
@@ -36,15 +34,3 @@ jobs:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         branch: ${{ github.ref }}
 
-    - name: Build site
-      run: |
-        cd app
-        npm install
-        npm run build
-
-    - name: Deploy to pages
-      uses: peaceiris/actions-gh-pages@v3
-      if: ${{ github.ref == 'refs/heads/master' }}
-      with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ./app/build
