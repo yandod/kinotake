@@ -1,0 +1,392 @@
+[
+    {
+        "text": "今日も一日笑っていきてるぞーっ♡\n皆も笑おうなっ(∩´∀`∩)💕\n\nたけのこの里と写真撮れた💛🤣ww\nあと韓国人🧔 🇰🇷 \n\n髪のセットが分かってきたこーたなり🤟 https://t.co/RHOkQtrXQQ",
+        "id": "1489484949539651585",
+        "author_id": "3067892754",
+        "context_annotations": [
+            {
+                "domain": {
+                    "id": "45",
+                    "name": "Brand Vertical",
+                    "description": "Top level entities that describe a Brands industry"
+                },
+                "entity": {
+                    "id": "781974596740190208",
+                    "name": "CPG"
+                }
+            },
+            {
+                "domain": {
+                    "id": "46",
+                    "name": "Brand Category",
+                    "description": "Categories within Brand Verticals that narrow down the scope of Brands"
+                },
+                "entity": {
+                    "id": "781974596144599042",
+                    "name": "Snacks"
+                }
+            },
+            {
+                "domain": {
+                    "id": "47",
+                    "name": "Brand",
+                    "description": "Brands and Companies"
+                },
+                "entity": {
+                    "id": "1125421338485608448",
+                    "name": "Takenoko no Sato (たけのこの里)",
+                    "description": "Takenoko no Sato (たけのこの里)"
+                }
+            }
+        ],
+        "entities": {
+            "urls": [
+                {
+                    "start": 82,
+                    "end": 105,
+                    "url": "https://t.co/RHOkQtrXQQ",
+                    "expanded_url": "https://twitter.com/zaki23131/status/1489484949539651585/photo/1",
+                    "display_url": "pic.twitter.com/RHOkQtrXQQ"
+                }
+            ]
+        },
+        "public_metrics": {
+            "retweet_count": 0,
+            "reply_count": 7,
+            "like_count": 18,
+            "quote_count": 0
+        }
+    },
+    {
+        "text": "Netflixで「転校生ナノ」見ながらたけのこの里食べてタピオカ飲んでTwitter漁ってる私。多分日本で1番幸せ💞",
+        "id": "1489489868229013504",
+        "author_id": "1476314331256352768",
+        "context_annotations": [
+            {
+                "domain": {
+                    "id": "45",
+                    "name": "Brand Vertical",
+                    "description": "Top level entities that describe a Brands industry"
+                },
+                "entity": {
+                    "id": "781974596740190208",
+                    "name": "CPG"
+                }
+            },
+            {
+                "domain": {
+                    "id": "46",
+                    "name": "Brand Category",
+                    "description": "Categories within Brand Verticals that narrow down the scope of Brands"
+                },
+                "entity": {
+                    "id": "781974596144599042",
+                    "name": "Snacks"
+                }
+            },
+            {
+                "domain": {
+                    "id": "47",
+                    "name": "Brand",
+                    "description": "Brands and Companies"
+                },
+                "entity": {
+                    "id": "1125421338485608448",
+                    "name": "Takenoko no Sato (たけのこの里)",
+                    "description": "Takenoko no Sato (たけのこの里)"
+                }
+            },
+            {
+                "domain": {
+                    "id": "45",
+                    "name": "Brand Vertical",
+                    "description": "Top level entities that describe a Brands industry"
+                },
+                "entity": {
+                    "id": "781974597310615553",
+                    "name": "Entertainment"
+                }
+            },
+            {
+                "domain": {
+                    "id": "46",
+                    "name": "Brand Category",
+                    "description": "Categories within Brand Verticals that narrow down the scope of Brands"
+                },
+                "entity": {
+                    "id": "781974596752842752",
+                    "name": "Services"
+                }
+            },
+            {
+                "domain": {
+                    "id": "46",
+                    "name": "Brand Category",
+                    "description": "Categories within Brand Verticals that narrow down the scope of Brands"
+                },
+                "entity": {
+                    "id": "781974597105094656",
+                    "name": "TV/Movies Related"
+                }
+            },
+            {
+                "domain": {
+                    "id": "47",
+                    "name": "Brand",
+                    "description": "Brands and Companies"
+                },
+                "entity": {
+                    "id": "10026367762",
+                    "name": "Netflix"
+                }
+            },
+            {
+                "domain": {
+                    "id": "47",
+                    "name": "Brand",
+                    "description": "Brands and Companies"
+                },
+                "entity": {
+                    "id": "10045225402",
+                    "name": "Twitter"
+                }
+            }
+        ],
+        "public_metrics": {
+            "retweet_count": 0,
+            "reply_count": 2,
+            "like_count": 12,
+            "quote_count": 0
+        },
+        "entities": {
+            "annotations": [
+                {
+                    "start": 0,
+                    "end": 6,
+                    "probability": 0.3143,
+                    "type": "Product",
+                    "normalized_text": "Netflix"
+                },
+                {
+                    "start": 9,
+                    "end": 13,
+                    "probability": 0.6979,
+                    "type": "Other",
+                    "normalized_text": "転校生ナノ"
+                },
+                {
+                    "start": 35,
+                    "end": 41,
+                    "probability": 0.5276,
+                    "type": "Product",
+                    "normalized_text": "Twitter"
+                },
+                {
+                    "start": 50,
+                    "end": 51,
+                    "probability": 0.8107,
+                    "type": "Place",
+                    "normalized_text": "日本"
+                }
+            ]
+        }
+    },
+    {
+        "text": "午前の部終わったー\nお昼にたけのこの里😄 https://t.co/MSugTWkOcF",
+        "id": "1489429132350214145",
+        "author_id": "1325283236247842817",
+        "context_annotations": [
+            {
+                "domain": {
+                    "id": "45",
+                    "name": "Brand Vertical",
+                    "description": "Top level entities that describe a Brands industry"
+                },
+                "entity": {
+                    "id": "781974596740190208",
+                    "name": "CPG"
+                }
+            },
+            {
+                "domain": {
+                    "id": "46",
+                    "name": "Brand Category",
+                    "description": "Categories within Brand Verticals that narrow down the scope of Brands"
+                },
+                "entity": {
+                    "id": "781974596144599042",
+                    "name": "Snacks"
+                }
+            },
+            {
+                "domain": {
+                    "id": "47",
+                    "name": "Brand",
+                    "description": "Brands and Companies"
+                },
+                "entity": {
+                    "id": "1125421338485608448",
+                    "name": "Takenoko no Sato (たけのこの里)",
+                    "description": "Takenoko no Sato (たけのこの里)"
+                }
+            }
+        ],
+        "entities": {
+            "urls": [
+                {
+                    "start": 21,
+                    "end": 44,
+                    "url": "https://t.co/MSugTWkOcF",
+                    "expanded_url": "https://twitter.com/sara_3529/status/1489429132350214145/photo/1",
+                    "display_url": "pic.twitter.com/MSugTWkOcF"
+                }
+            ]
+        },
+        "public_metrics": {
+            "retweet_count": 0,
+            "reply_count": 3,
+            "like_count": 8,
+            "quote_count": 0
+        }
+    },
+    {
+        "text": "やっと熟睡🐏𓈒◌午前中短すぎたヨ.ᐟ\n昼からはたくさん寝てくれよ〜🦥𓏸𓈒𓂃\n\nやっと食べれる😮‍💨\nたけのこの里も食べよう🍫ˊ˗\n甘いものが食べたすぎる.ᐟ .ᐟ",
+        "id": "1489466741847515140",
+        "author_id": "1218196740559400960",
+        "context_annotations": [
+            {
+                "domain": {
+                    "id": "45",
+                    "name": "Brand Vertical",
+                    "description": "Top level entities that describe a Brands industry"
+                },
+                "entity": {
+                    "id": "781974596740190208",
+                    "name": "CPG"
+                }
+            },
+            {
+                "domain": {
+                    "id": "46",
+                    "name": "Brand Category",
+                    "description": "Categories within Brand Verticals that narrow down the scope of Brands"
+                },
+                "entity": {
+                    "id": "781974596144599042",
+                    "name": "Snacks"
+                }
+            },
+            {
+                "domain": {
+                    "id": "47",
+                    "name": "Brand",
+                    "description": "Brands and Companies"
+                },
+                "entity": {
+                    "id": "1125421338485608448",
+                    "name": "Takenoko no Sato (たけのこの里)",
+                    "description": "Takenoko no Sato (たけのこの里)"
+                }
+            }
+        ],
+        "public_metrics": {
+            "retweet_count": 0,
+            "reply_count": 0,
+            "like_count": 5,
+            "quote_count": 0
+        }
+    },
+    {
+        "text": "@nanamorisan おはようございます☀️\n昨日、たけのこの里買ってきたのでお仕事終わりに遊んでみようと思います✨",
+        "id": "1489474244811497473",
+        "author_id": "1224962287787577344",
+        "entities": {
+            "mentions": [
+                {
+                    "start": 0,
+                    "end": 12,
+                    "username": "nanamorisan",
+                    "id": "2530340233"
+                }
+            ]
+        },
+        "context_annotations": [
+            {
+                "domain": {
+                    "id": "10",
+                    "name": "Person",
+                    "description": "Named people in the world like Nelson Mandela"
+                },
+                "entity": {
+                    "id": "1338598966779232256",
+                    "name": "Nanamori",
+                    "description": "すとぷり　Strawberry Prince"
+                }
+            },
+            {
+                "domain": {
+                    "id": "45",
+                    "name": "Brand Vertical",
+                    "description": "Top level entities that describe a Brands industry"
+                },
+                "entity": {
+                    "id": "781974596740190208",
+                    "name": "CPG"
+                }
+            },
+            {
+                "domain": {
+                    "id": "46",
+                    "name": "Brand Category",
+                    "description": "Categories within Brand Verticals that narrow down the scope of Brands"
+                },
+                "entity": {
+                    "id": "781974596144599042",
+                    "name": "Snacks"
+                }
+            },
+            {
+                "domain": {
+                    "id": "47",
+                    "name": "Brand",
+                    "description": "Brands and Companies"
+                },
+                "entity": {
+                    "id": "1125421338485608448",
+                    "name": "Takenoko no Sato (たけのこの里)",
+                    "description": "Takenoko no Sato (たけのこの里)"
+                }
+            },
+            {
+                "domain": {
+                    "id": "54",
+                    "name": "Musician",
+                    "description": "A musician in the world, like Adele or Bob Dylan"
+                },
+                "entity": {
+                    "id": "1338598966779232256",
+                    "name": "Nanamori",
+                    "description": "すとぷり　Strawberry Prince"
+                }
+            },
+            {
+                "domain": {
+                    "id": "55",
+                    "name": "Music Genre",
+                    "description": "A category for a musical style, like Pop, Rock, or Rap"
+                },
+                "entity": {
+                    "id": "810938095772123136",
+                    "name": "J-pop",
+                    "description": "J-POP"
+                }
+            }
+        ],
+        "public_metrics": {
+            "retweet_count": 0,
+            "reply_count": 0,
+            "like_count": 4,
+            "quote_count": 0
+        }
+    }
+]

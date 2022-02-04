@@ -18,7 +18,7 @@ async function getRequest(target) {
     const {id, query} = target;
     const params = {
         'query': `${query} lang:ja`,
-        'tweet.fields': 'author_id,public_metrics',
+        'tweet.fields': 'author_id,public_metrics,context_annotations,entities',
         'max_results': '100'
     }
 

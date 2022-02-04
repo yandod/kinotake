@@ -1,0 +1,248 @@
+[
+    {
+        "author_id": "1620411348",
+        "text": "なおさんきのこの山派らしい\n見損なったわ",
+        "id": "1489404305488576517",
+        "public_metrics": {
+            "retweet_count": 5,
+            "reply_count": 4,
+            "like_count": 276,
+            "quote_count": 0
+        },
+        "context_annotations": [
+            {
+                "domain": {
+                    "id": "45",
+                    "name": "Brand Vertical",
+                    "description": "Top level entities that describe a Brands industry"
+                },
+                "entity": {
+                    "id": "781974596740190208",
+                    "name": "CPG"
+                }
+            },
+            {
+                "domain": {
+                    "id": "46",
+                    "name": "Brand Category",
+                    "description": "Categories within Brand Verticals that narrow down the scope of Brands"
+                },
+                "entity": {
+                    "id": "781974596144599042",
+                    "name": "Snacks"
+                }
+            },
+            {
+                "domain": {
+                    "id": "47",
+                    "name": "Brand",
+                    "description": "Brands and Companies"
+                },
+                "entity": {
+                    "id": "1124041517394419712",
+                    "name": "Kinoko No Yama (きのこの山)",
+                    "description": "Kinoko No Yama (きのこの山)"
+                }
+            }
+        ]
+    },
+    {
+        "author_id": "1060072150252453889",
+        "entities": {
+            "urls": [
+                {
+                    "start": 127,
+                    "end": 150,
+                    "url": "https://t.co/tzy5plcFS5",
+                    "expanded_url": "https://twitter.com/aikawaharu1/status/1489436824430788611/photo/1",
+                    "display_url": "pic.twitter.com/tzy5plcFS5"
+                }
+            ],
+            "hashtags": [
+                {
+                    "start": 116,
+                    "end": 126,
+                    "tag": "twstぬい撮り部"
+                }
+            ]
+        },
+        "text": "ジェぬいにきのこの山あげたいなーって1点買いしたら見事欲しかったやつが入ってた😆✨✨\nプレゼントしてみたらジェぬいは意外と冷静でラギぬいの方が予想外にストーブをいたく気に入ってた…😂\nヤケドしちゃうからあんまり近づき過ぎないでね💦\n#twstぬい撮り部 https://t.co/tzy5plcFS5",
+        "id": "1489436824430788611",
+        "public_metrics": {
+            "retweet_count": 0,
+            "reply_count": 1,
+            "like_count": 16,
+            "quote_count": 0
+        },
+        "context_annotations": [
+            {
+                "domain": {
+                    "id": "45",
+                    "name": "Brand Vertical",
+                    "description": "Top level entities that describe a Brands industry"
+                },
+                "entity": {
+                    "id": "781974596740190208",
+                    "name": "CPG"
+                }
+            },
+            {
+                "domain": {
+                    "id": "46",
+                    "name": "Brand Category",
+                    "description": "Categories within Brand Verticals that narrow down the scope of Brands"
+                },
+                "entity": {
+                    "id": "781974596144599042",
+                    "name": "Snacks"
+                }
+            },
+            {
+                "domain": {
+                    "id": "47",
+                    "name": "Brand",
+                    "description": "Brands and Companies"
+                },
+                "entity": {
+                    "id": "1124041517394419712",
+                    "name": "Kinoko No Yama (きのこの山)",
+                    "description": "Kinoko No Yama (きのこの山)"
+                }
+            }
+        ]
+    },
+    {
+        "author_id": "1188611303151038464",
+        "entities": {
+            "urls": [
+                {
+                    "start": 30,
+                    "end": 53,
+                    "url": "https://t.co/KYQc3fe7JD",
+                    "expanded_url": "https://twitter.com/kokeshi_ningyoh/status/1489405901706756096/photo/1",
+                    "display_url": "pic.twitter.com/KYQc3fe7JD"
+                }
+            ],
+            "hashtags": [
+                {
+                    "start": 18,
+                    "end": 29,
+                    "tag": "リカちゃんキャッスル"
+                }
+            ]
+        },
+        "text": "可愛い子にはきのこの山あげちゃう🥰\n#リカちゃんキャッスル https://t.co/KYQc3fe7JD",
+        "id": "1489405901706756096",
+        "public_metrics": {
+            "retweet_count": 0,
+            "reply_count": 2,
+            "like_count": 14,
+            "quote_count": 0
+        }
+    },
+    {
+        "author_id": "1351314886567948288",
+        "entities": {
+            "urls": [
+                {
+                    "start": 23,
+                    "end": 46,
+                    "url": "https://t.co/dB4NUF4iTC",
+                    "expanded_url": "https://twitter.com/reimiatokyo/status/1489479684928651264/photo/1",
+                    "display_url": "pic.twitter.com/dB4NUF4iTC"
+                }
+            ]
+        },
+        "text": "きのこの山\nわあい\nレイミアきのこの山大好き https://t.co/dB4NUF4iTC",
+        "id": "1489479684928651264",
+        "public_metrics": {
+            "retweet_count": 0,
+            "reply_count": 0,
+            "like_count": 12,
+            "quote_count": 0
+        },
+        "context_annotations": [
+            {
+                "domain": {
+                    "id": "45",
+                    "name": "Brand Vertical",
+                    "description": "Top level entities that describe a Brands industry"
+                },
+                "entity": {
+                    "id": "781974596740190208",
+                    "name": "CPG"
+                }
+            },
+            {
+                "domain": {
+                    "id": "46",
+                    "name": "Brand Category",
+                    "description": "Categories within Brand Verticals that narrow down the scope of Brands"
+                },
+                "entity": {
+                    "id": "781974596144599042",
+                    "name": "Snacks"
+                }
+            },
+            {
+                "domain": {
+                    "id": "47",
+                    "name": "Brand",
+                    "description": "Brands and Companies"
+                },
+                "entity": {
+                    "id": "1124041517394419712",
+                    "name": "Kinoko No Yama (きのこの山)",
+                    "description": "Kinoko No Yama (きのこの山)"
+                }
+            }
+        ]
+    },
+    {
+        "author_id": "1150387813990277125",
+        "text": "勢いで始めた禁煙生活、今のとこ禁断症状は出ていないようだ。\n\n強いて言うなら今まで1度も買ったことのなかったきのこの山を食べたくらいだ\n\nかゆい  うま",
+        "id": "1489472012829736961",
+        "public_metrics": {
+            "retweet_count": 0,
+            "reply_count": 5,
+            "like_count": 9,
+            "quote_count": 0
+        },
+        "context_annotations": [
+            {
+                "domain": {
+                    "id": "45",
+                    "name": "Brand Vertical",
+                    "description": "Top level entities that describe a Brands industry"
+                },
+                "entity": {
+                    "id": "781974596740190208",
+                    "name": "CPG"
+                }
+            },
+            {
+                "domain": {
+                    "id": "46",
+                    "name": "Brand Category",
+                    "description": "Categories within Brand Verticals that narrow down the scope of Brands"
+                },
+                "entity": {
+                    "id": "781974596144599042",
+                    "name": "Snacks"
+                }
+            },
+            {
+                "domain": {
+                    "id": "47",
+                    "name": "Brand",
+                    "description": "Brands and Companies"
+                },
+                "entity": {
+                    "id": "1124041517394419712",
+                    "name": "Kinoko No Yama (きのこの山)",
+                    "description": "Kinoko No Yama (きのこの山)"
+                }
+            }
+        ]
+    }
+]

@@ -9,8 +9,11 @@ import TabPanel from '@mui/lab/TabPanel';
 import Chart from 'react-apexcharts';
 import Kinoko from './data/kinoko.json';
 import Takenoko from './data/takenoko.json';
+import KinokoPoplar from './data/kinokoPopular.json';
+import TakenokoPoplar from './data/takenokoPopular.json';
 import Emacs from './data/emacs.json';
 import Vim from './data/vim.json';
+import { TwitterTweetEmbed } from 'react-twitter-embed';
 
 function dateFormat(dateString: string) {
   const date = new Date(Date.parse(dateString));
@@ -104,6 +107,26 @@ function App() {
             <Paper>
               <Chart options={options.kinotake} series={series.kinotake} legend={legend} type="donut" width="100%" height="300px"/>
             </Paper>
+            <Box
+                sx={{
+                  display: 'grid',
+                  gap: 1,
+                  gridTemplateColumns: 'repeat(2, 1fr)',
+                }}
+              >
+              <Box>
+                <h2> Kinoko </h2>
+              <TwitterTweetEmbed tweetId={KinokoPoplar[0].id} options={{hideThread: true}}/>
+              <TwitterTweetEmbed tweetId={KinokoPoplar[1].id} options={{hideThread: true}}/>
+              <TwitterTweetEmbed tweetId={KinokoPoplar[2].id} options={{hideThread: true}}/>
+              </Box>
+              <Box>
+                <h2>Takenoko</h2>
+              <TwitterTweetEmbed tweetId={TakenokoPoplar[0].id} options={{hideThread: 'true'}}/>
+              <TwitterTweetEmbed tweetId={TakenokoPoplar[1].id} options={{hideThread: 'true'}}/>
+              <TwitterTweetEmbed tweetId={TakenokoPoplar[2].id} options={{hideThread: 'true'}}/>
+              </Box>
+            </Box>
           </TabPanel>
           <TabPanel value="2">
           <Paper>
