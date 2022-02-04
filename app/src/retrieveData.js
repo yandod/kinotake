@@ -3,7 +3,6 @@
 
 const needle = require('needle');
 const fs = require('fs');
-
 const token = process.env.BEARER_TOKEN;
 
 const endpointUrl = "https://api.twitter.com/2/tweets/counts/recent";
@@ -27,13 +26,13 @@ async function getRequest(target) {
         headers: {
             "User-Agent": "v2RecentTweetCountsJS",
             "authorization": `Bearer ${token}`
-        },
+        }
     })
 
-    if (res.body) {
+    if (res.body && res.statusCode === 200) {
         return res.body;
     } else {
-        throw new Error('Unsuccessful request');
+        throw new Error(`Unsuccessful request on ${id}:` + res.body);
     }
 }
 

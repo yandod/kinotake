@@ -1,10 +1,6 @@
-name: build site and push to gh-pages
+name: Daily Update
 
 on:
-  push:
-    branches: [ master ]
-  schedule:
-    - cron:  '45 14 * * *'
   workflow_dispatch:
 jobs:
   build:
@@ -20,7 +16,7 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: 17
-    
+  
     - name: update data
       env:
         BEARER_TOKEN: ${{ secrets.BEARER_TOKEN }}
@@ -29,15 +25,12 @@ jobs:
         npm install
         node ./src/retrieveData.js
 
-    - name: Build site
-      run: |
-        cd app
-        npm install
-        npm run build
-
-    - name: Deploy to pages
-      uses: peaceiris/actions-gh-pages@v3
-      if: ${{ github.ref == 'refs/heads/master' }}
+    - name: Simple commit
+      uses: zwaldowski/git-commit-action@v1
+    
+    - name: Push changes
+      uses: ad-m/github-push-action@master
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ./app/build
+        branch: ${{ github.ref }}
+

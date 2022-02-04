@@ -16,6 +16,9 @@ test:
 check:
 	docker compose run node npx eslint ./src/
 
+update:
+	docker compose run node ./src/retrieveData.js
+
 build:
 	docker compose run node npm run build
 #history
@@ -24,3 +27,4 @@ build:
 #docker compose run node npm i --save @devexpress/dx-react-core @devexpress/dx-react-chart
 #docker compose run node npm i --save @devexpress/dx-react-chart-material-ui
 #docker compose run node npm install needle --save
+#docker compose run node npm install apexcharts --save
