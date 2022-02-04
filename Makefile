@@ -17,7 +17,7 @@ check:
 	docker compose run node npx eslint ./src/
 
 update:
-	docker compose run node ./src/retrieveTweetsCount.js
+	docker compose run node ./src/script/retrieveTweetsCount.js
 
 build:
 	docker compose run node npm run build
