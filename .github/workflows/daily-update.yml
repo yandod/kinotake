@@ -23,7 +23,7 @@ jobs:
       run: |
         cd app
         npm install
-        node ./src/retrieveData.js
+        node ./src/retrieveTweetsCount.js
 
     - name: Simple commit
       uses: zwaldowski/git-commit-action@v1

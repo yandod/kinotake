@@ -27,7 +27,7 @@ jobs:
       run: |
         cd app
         npm install
-        node ./src/retrieveData.js
+        node ./src/retrieveTweetsCount.js
 
     - name: Build site
       run: |
