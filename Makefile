@@ -1,7 +1,12 @@
 
 install:
 	docker compose run node npm install
-
+install-python:
+#	docker compose run python apk update
+#	docker compose run python apk --update-cache add python3-dev gcc g++ libc-dev linux-headers
+#	docker compose run python apk --update-cache add libgcc libquadmath musl libgfortran lapack-dev
+#	docker compose run python apk add libmecab2 libmecab-dev mecab mecab-utils nkf
+	docker compose run python pip install pymlask -t ./src/script
 start:
 	docker compose run --service-ports node npm start 
 

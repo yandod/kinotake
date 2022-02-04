@@ -4,24 +4,19 @@
 const needle = require('needle');
 const fs = require('fs');
 
-// The code below sets the bearer token from your environment variables
-// To set environment variables on macOS or Linux, run the export command below from the terminal:
-// export BEARER_TOKEN='YOUR-TOKEN'
 const token = process.env.BEARER_TOKEN;
 
 const endpointUrl = "https://api.twitter.com/2/tweets/counts/recent";
 
 const targets = [
-    {id:'kinoko', keyword:'きのこの山'},
-    {id:'takenoko', keyword:'たけのこの里'},
+    {id:'kinoko', keyword:'きのこの山 -たけのこの里'},
+    {id:'takenoko', keyword:'たけのこの里 -きのこの山'},
     {id:'emacs', keyword:'emacs'},
     {id:'vim', keyword:'vim'},
 ]
 
 async function getRequest(target) {
 
-    // Edit query parameters below and specify a search query
-    // optional params: start_time,end_time,since_id,until_id,next_token,granularity
     const {id, keyword} = target;
     const params = {
         'query': `${keyword} lang:ja`,
@@ -33,11 +28,9 @@ async function getRequest(target) {
             "User-Agent": "v2RecentTweetCountsJS",
             "authorization": `Bearer ${token}`
         },
-        //output: `${id}.json`
     })
 
     if (res.body) {
-        //fs.writeFileSync(`${id}.json`, res.body);
         return res.body;
     } else {
         throw new Error('Unsuccessful request');
@@ -62,5 +55,4 @@ async function getRequest(target) {
         console.log(e);
         process.exit(-1);
     }
-    //process.exit();
 })();
