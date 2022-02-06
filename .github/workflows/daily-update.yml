@@ -32,17 +32,19 @@ jobs:
         with:
           name: output-json-data
           path: ./app/src/data
+
   python-container:
     needs: build
     runs-on: ubuntu-latest
     container:
       image: intimatemerger/mecab-ipadic-neologd
     steps:
+
     - uses: actions/checkout@v2
-    - name: Download a single artifact
+
+    - name: Download all workflow run artifacts
       uses: actions/download-artifact@v2
-      with:
-        name: output-json-data
+
     - name: python exec
       working-directory: ./app
       env:
