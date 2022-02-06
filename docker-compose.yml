@@ -14,7 +14,9 @@ services:
     working_dir: /var/www/html
     volumes:
       - ./app:/var/www/html:cached
+      - ./app/pip_modules:/pip_modules
     environment:
       - PYTHONIOENCODING=utf-8
       - LANG=C.UTF-8
+      - PYTHONUSERBASE=/pip_modules
 
