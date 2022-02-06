@@ -26,6 +26,12 @@ jobs:
         node ./src/script/retrieveTweetsCount.js
         node ./src/script/retrieveSearchRecent.js
         node ./src/script/determinePopular.js
+    - name: upload data to artifact
+      uses: actions/upload-artifact@v2
+        with:
+          name: output-json-data
+          path: |
+            ./app/src/data
   python-container:
     needs: build
     runs-on: ubuntu-latest
@@ -33,13 +39,17 @@ jobs:
       image: intimatemerger/mecab-ipadic-neologd
     steps:
     - uses: actions/checkout@v2
+    - name: Download a single artifact
+      uses: actions/download-artifact@v2
+      with:
+        name: output-json-data
     - name: python exec
+      working-directory: ./app
       env:
         PYTHONIOENCODING: utf-8
         LANG: C.UTF-8
         PYTHONUSERBASE: ./pip_modules
       run: |
-        cd app
         pip install pymlask --user
         python ./src/script/analyzeSentiment.py
     # - name: Simple commit
