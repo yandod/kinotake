@@ -23,14 +23,29 @@ jobs:
       run: |
         cd app
         npm install
-        node ./src/scripts/retrieveTweetsCount.js
-
-    - name: Simple commit
-      uses: zwaldowski/git-commit-action@v1
+        node ./src/script/retrieveTweetsCount.js
+        node ./src/script/retrieveSearchRecent.js
+        node ./src/script/determinePopular.js
+  python-container:
+    runs-on: ubuntu-latest
+    container:
+      image: intimatemerger/mecab-ipadic-neologd
+    steps:
+    - name: python exec
+      env:
+        PYTHONIOENCODING: utf-8
+        LANG: C.UTF-8
+        PYTHONUSERBASE: /pip_modules
+      run: |
+        cd app
+        pip install pymlask --user
+        python ./src/script/analyzeSentiment.py
+    # - name: Simple commit
+    #   uses: zwaldowski/git-commit-action@v1
     
-    - name: Push changes
-      uses: ad-m/github-push-action@master
-      with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        branch: ${{ github.ref }}
+    # - name: Push changes
+    #   uses: ad-m/github-push-action@master
+    #   with:
+    #     github_token: ${{ secrets.GITHUB_TOKEN }}
+    #     branch: ${{ github.ref }}
 
