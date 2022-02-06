@@ -27,6 +27,7 @@ jobs:
         node ./src/script/retrieveSearchRecent.js
         node ./src/script/determinePopular.js
   python-container:
+    needs: build
     runs-on: ubuntu-latest
     container:
       image: intimatemerger/mecab-ipadic-neologd
@@ -37,7 +38,6 @@ jobs:
         LANG: C.UTF-8
         PYTHONUSERBASE: /pip_modules
       run: |
-        cd app
         pip install pymlask --user
         python ./src/script/analyzeSentiment.py
     # - name: Simple commit
