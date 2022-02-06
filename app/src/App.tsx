@@ -11,6 +11,7 @@ import Kinoko from './data/kinoko.json';
 import Takenoko from './data/takenoko.json';
 import KinokoPoplar from './data/kinokoPopular.json';
 import TakenokoPoplar from './data/takenokoPopular.json';
+import KinokoEmotion from './data/kinokoEmotion.json';
 import Emacs from './data/emacs.json';
 import Vim from './data/vim.json';
 import { TwitterTweetEmbed } from 'react-twitter-embed';
@@ -19,6 +20,15 @@ function dateFormat(dateString: string) {
   const date = new Date(Date.parse(dateString));
   return date.toISOString().slice(0, 10);
 }
+
+let kinokoEmotionData: Array<{x: string, y: number}> = [];
+Object.entries(KinokoEmotion.orientation).forEach(([key, value]) => {
+  kinokoEmotionData.push({
+    x: key,
+    y: value
+  });
+});
+
 
 const series = {
     kinotake: [
@@ -49,11 +59,15 @@ const series = {
         {x: dateFormat(Kinoko.data[6].end), y:Kinoko.data[6].tweet_count},
       ]}
     ],
+    kinokoDeepdive: [{
+      data: kinokoEmotionData
+    }],
     editor: [
       Emacs.meta.total_tweet_count,
       Vim.meta.total_tweet_count
     ]
   }
+
 const labels = {
   kinotake: [
     'Takenoko',
@@ -71,6 +85,16 @@ const options = {
   },
   editor: {
     labels: labels.editor
+  },
+  deepdive: {
+    chart: {
+      stacked: true
+    },
+    plotOptions: {
+      bar: {
+        horizontal: true
+      }
+    },
   }
 }
 
@@ -100,7 +124,9 @@ function App() {
              >
               <Tab label="Kinoko vs Takenoko" value="1" wrapped/>
               <Tab label="Kinoko vs Takenoko (time)" value="2" wrapped/>
-              <Tab label="Emacs vs Vim" value="3" wrapped/>
+              <Tab label="Kinoko deep dive" value="3"/>
+              <Tab label="Takenoko deep dive" value="4"/>
+              <Tab label="Emacs vs Vim" value="5" wrapped/>
             </TabList>
           </Box>
           <TabPanel value="1">
@@ -134,6 +160,12 @@ function App() {
             </Paper>
           </TabPanel>
           <TabPanel value="3">
+          <Paper>
+                <h2>Orientation</h2>
+              <Chart options={options.deepdive} series={series.kinokoDeepdive} legend={legend} type="treemap" width="100%" height="300px"/>
+            </Paper>
+          </TabPanel>
+          <TabPanel value="5">
             <Paper>
               <Chart options={options.editor} series={series.editor} legend={legend} type="donut" width="100%" height="300px"/>
             </Paper>

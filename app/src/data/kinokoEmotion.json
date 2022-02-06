@@ -1,0 +1,22 @@
+{
+    "intension": {
+        "0": 7,
+        "1": 13,
+        "2": 9,
+        "3": 3
+    },
+    "orientation": {
+        "POSITIVE": 19,
+        "NEUTRAL": 6,
+        "NEGATIVE": 5,
+        "mostly_POSITIVE": 2
+    },
+    "representative": {
+        "suki": 7,
+        "odoroki": 2,
+        "iya": 4,
+        "haji": 1,
+        "yorokobi": 17,
+        "kowa": 1
+    }
+}

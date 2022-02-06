@@ -1,12 +1,8 @@
 
 install:
 	docker compose run node npm install
-install-python:
-#	docker compose run python apk update
-#	docker compose run python apk --update-cache add python3-dev gcc g++ libc-dev linux-headers
-#	docker compose run python apk --update-cache add libgcc libquadmath musl libgfortran lapack-dev
-#	docker compose run python apk add libmecab2 libmecab-dev mecab mecab-utils nkf
-	docker compose run python pip install pymlask -t ./src/script
+	docker compose run python pip install pymlask --user
+
 start:
 	docker compose run --service-ports node npm start 
 
@@ -18,9 +14,13 @@ check:
 
 update:
 	docker compose run node ./src/script/retrieveTweetsCount.js
+	docker compose run node node ./src/script/retrieveSearchRecent.js
+	docker compose run node node ./src/script/determinePopular.js
+	docker compose run python python ./src/script/analyzeSentiment.py
 
 build:
 	docker compose run node npm run build
+
 #history
 #docker compose run node npx create-react-app --template typescript app
 #docker compose run node npm install react-number-format --save
