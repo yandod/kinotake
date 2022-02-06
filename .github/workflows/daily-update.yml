@@ -32,12 +32,14 @@ jobs:
     container:
       image: intimatemerger/mecab-ipadic-neologd
     steps:
+    - uses: actions/checkout@v2
     - name: python exec
       env:
         PYTHONIOENCODING: utf-8
         LANG: C.UTF-8
-        PYTHONUSERBASE: /pip_modules
+        PYTHONUSERBASE: ./pip_modules
       run: |
+        cd app
         pip install pymlask --user
         python ./src/script/analyzeSentiment.py
     # - name: Simple commit
