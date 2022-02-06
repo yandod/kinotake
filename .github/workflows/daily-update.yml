@@ -30,7 +30,7 @@ jobs:
       uses: actions/upload-artifact@v2
         with:
           name: output-json-data
-          path: |
+          path:
             ./app/src/data
   python-container:
     needs: build
