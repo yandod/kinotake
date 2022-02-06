@@ -32,34 +32,33 @@ jobs:
         with:
           name: output-json-data
           path: ./app/src/data
+  # python-container:
+  #   needs: build
+  #   runs-on: ubuntu-latest
+  #   container:
+  #     image: intimatemerger/mecab-ipadic-neologd
+  #   steps:
 
-  python-container:
-    needs: build
-    runs-on: ubuntu-latest
-    container:
-      image: intimatemerger/mecab-ipadic-neologd
-    steps:
+  #   - uses: actions/checkout@v2
 
-    - uses: actions/checkout@v2
+  #   - name: Download all workflow run artifacts
+  #     uses: actions/download-artifact@v2
 
-    - name: Download all workflow run artifacts
-      uses: actions/download-artifact@v2
-
-    - name: python exec
-      working-directory: ./app
-      env:
-        PYTHONIOENCODING: utf-8
-        LANG: C.UTF-8
-        PYTHONUSERBASE: ./pip_modules
-      run: |
-        pip install pymlask --user
-        python ./src/script/analyzeSentiment.py
-    # - name: Simple commit
-    #   uses: zwaldowski/git-commit-action@v1
+  #   - name: python exec
+  #     working-directory: ./app
+  #     env:
+  #       PYTHONIOENCODING: utf-8
+  #       LANG: C.UTF-8
+  #       PYTHONUSERBASE: ./pip_modules
+  #     run: |
+  #       pip install pymlask --user
+  #       python ./src/script/analyzeSentiment.py
+  #   # - name: Simple commit
+  #   #   uses: zwaldowski/git-commit-action@v1
     
-    # - name: Push changes
-    #   uses: ad-m/github-push-action@master
-    #   with:
-    #     github_token: ${{ secrets.GITHUB_TOKEN }}
-    #     branch: ${{ github.ref }}
+  #   # - name: Push changes
+  #   #   uses: ad-m/github-push-action@master
+  #   #   with:
+  #   #     github_token: ${{ secrets.GITHUB_TOKEN }}
+  #   #     branch: ${{ github.ref }}
 
