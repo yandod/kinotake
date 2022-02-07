@@ -1,4 +1,4 @@
-// process search result from json to narrow down popular entities by likes
+// process search result from json to summarize annotaions for entry
 //
 
 const fs = require('fs');
@@ -19,9 +19,11 @@ function findPopular (target){
             return;
         }
         node.context_annotations.forEach((context) => {
+            // skip vertical
             if (context.domain.name.includes(' Vertical')) {
                 return;
             }
+            // skip category
             if (context.domain.name.includes(' Category')) {
                 return;
             }

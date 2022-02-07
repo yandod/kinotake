@@ -12,7 +12,11 @@ Kinoko or Takenoko on social media?
 
 # Usage
 
+Makefile provide simple entry point to run tasks on docker containers.
+
 ## setup
+
+pull containers [node and python] image and install depedency.
 
 ```sh
 make install
