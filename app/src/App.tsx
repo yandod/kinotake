@@ -105,6 +105,7 @@ function App() {
           </Box>
           <TabPanel value="1">
             <Paper>
+              <h2>Count of Tweets</h2>
               <Chart options={options.kinotake} series={series.kinotake} legend={legend} type="donut" width="100%" height="300px"/>
             </Paper>
             <Box
@@ -115,16 +116,16 @@ function App() {
                 }}
               >
               <Box>
-                <h2> Kinoko </h2>
+                <h2> Kinoko (きのこの山)</h2>
               <TwitterTweetEmbed tweetId={KinokoPoplar[0].id} options={{hideThread: true}}/>
               <TwitterTweetEmbed tweetId={KinokoPoplar[1].id} options={{hideThread: true}}/>
               <TwitterTweetEmbed tweetId={KinokoPoplar[2].id} options={{hideThread: true}}/>
               </Box>
               <Box>
-                <h2>Takenoko</h2>
-              <TwitterTweetEmbed tweetId={TakenokoPoplar[0].id} options={{hideThread: 'true'}}/>
-              <TwitterTweetEmbed tweetId={TakenokoPoplar[1].id} options={{hideThread: 'true'}}/>
-              <TwitterTweetEmbed tweetId={TakenokoPoplar[2].id} options={{hideThread: 'true'}}/>
+                <h2>Takenoko (たけのこの里)</h2>
+              <TwitterTweetEmbed tweetId={TakenokoPoplar[0].id} options={{hideThread: true}}/>
+              <TwitterTweetEmbed tweetId={TakenokoPoplar[1].id} options={{hideThread: true}}/>
+              <TwitterTweetEmbed tweetId={TakenokoPoplar[2].id} options={{hideThread: true}}/>
               </Box>
             </Box>
           </TabPanel>
