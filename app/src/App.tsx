@@ -12,22 +12,19 @@ import Takenoko from './data/takenoko.json';
 import KinokoPoplar from './data/kinokoPopular.json';
 import TakenokoPoplar from './data/takenokoPopular.json';
 import KinokoEmotion from './data/kinokoEmotion.json';
+import TakenokoEmotion from './data/takenokoEmotion.json';
+import KinokoAnnotation from './data/kinokoAnnotation.json';
+import TakenokoAnnotation from './data/takenokoAnnotation.json';
+
 import Emacs from './data/emacs.json';
 import Vim from './data/vim.json';
 import { TwitterTweetEmbed } from 'react-twitter-embed';
+import ChartData from './ChartData';
 
 function dateFormat(dateString: string) {
   const date = new Date(Date.parse(dateString));
   return date.toISOString().slice(0, 10);
 }
-
-let kinokoEmotionData: Array<{x: string, y: number}> = [];
-Object.entries(KinokoEmotion.orientation).forEach(([key, value]) => {
-  kinokoEmotionData.push({
-    x: key,
-    y: value
-  });
-});
 
 
 const series = {
@@ -38,30 +35,13 @@ const series = {
     kinotakeTime: [
       {
         name: 'Takenoko',
-        data:[
-        {x: dateFormat(Takenoko.data[0].end), y:Takenoko.data[0].tweet_count},
-        {x: dateFormat(Takenoko.data[1].end), y:Takenoko.data[1].tweet_count},
-        {x: dateFormat(Takenoko.data[2].end), y:Takenoko.data[2].tweet_count},
-        {x: dateFormat(Takenoko.data[3].end), y:Takenoko.data[3].tweet_count},
-        {x: dateFormat(Takenoko.data[4].end), y:Takenoko.data[4].tweet_count},
-        {x: dateFormat(Takenoko.data[5].end), y:Takenoko.data[5].tweet_count},
-        {x: dateFormat(Takenoko.data[6].end), y:Takenoko.data[6].tweet_count},
-      ]},
+        data: ChartData.formatToLine(Takenoko.data)
+      },
       {
         name: 'Kinoko',
-        data:[
-        {x: dateFormat(Kinoko.data[0].end), y:Kinoko.data[0].tweet_count},
-        {x: dateFormat(Kinoko.data[1].end), y:Kinoko.data[1].tweet_count},
-        {x: dateFormat(Kinoko.data[2].end), y:Kinoko.data[2].tweet_count},
-        {x: dateFormat(Kinoko.data[3].end), y:Kinoko.data[3].tweet_count},
-        {x: dateFormat(Kinoko.data[4].end), y:Kinoko.data[4].tweet_count},
-        {x: dateFormat(Kinoko.data[5].end), y:Kinoko.data[5].tweet_count},
-        {x: dateFormat(Kinoko.data[6].end), y:Kinoko.data[6].tweet_count},
-      ]}
+        data: ChartData.formatToLine(Kinoko.data)
+      }
     ],
-    kinokoDeepdive: [{
-      data: kinokoEmotionData
-    }],
     editor: [
       Emacs.meta.total_tweet_count,
       Vim.meta.total_tweet_count
@@ -123,7 +103,7 @@ function App() {
              variant="scrollable"
              >
               <Tab label="Kinoko vs Takenoko" value="1" wrapped/>
-              <Tab label="Kinoko vs Takenoko (time)" value="2" wrapped/>
+              <Tab label="time series" value="2" wrapped/>
               <Tab label="Kinoko deep dive" value="3"/>
               <Tab label="Takenoko deep dive" value="4"/>
               <Tab label="Emacs vs Vim" value="5" wrapped/>
@@ -161,9 +141,23 @@ function App() {
           </TabPanel>
           <TabPanel value="3">
           <Paper>
-                <h2>Orientation</h2>
-              <Chart options={options.deepdive} series={series.kinokoDeepdive} legend={legend} type="treemap" width="100%" height="300px"/>
+              <h2>Orientation by phmlask</h2>
+              <Chart options={options.deepdive} series={ChartData.formatToTreemap(KinokoEmotion.orientation)} legend={legend} type="treemap" width="100%" height="300px"/>
+              <h2>Representation by phmlask</h2>
+              <Chart options={options.deepdive} series={ChartData.formatToTreemap(KinokoEmotion.representative)} legend={legend} type="treemap" width="100%" height="300px"/>
+              <h2>Annotation</h2>
+              <Chart options={options.deepdive} series={ChartData.formatToTreemap(KinokoAnnotation)} legend={legend} type="treemap" width="100%" height="300px"/>
             </Paper>
+          </TabPanel>
+          <TabPanel value="4">
+          <Paper>
+              <h2>Orientation by phmlask</h2>
+              <Chart options={options.deepdive} series={ChartData.formatToTreemap(TakenokoEmotion.orientation)} legend={legend} type="treemap" width="100%" height="300px"/>
+              <h2>Representation by phmlask</h2>
+              <Chart options={options.deepdive} series={ChartData.formatToTreemap(TakenokoEmotion.representative)} legend={legend} type="treemap" width="100%" height="300px"/>
+              <h2>Annotation</h2>
+              <Chart options={options.deepdive} series={ChartData.formatToTreemap(TakenokoAnnotation)} legend={legend} type="treemap" width="100%" height="300px"/>
+          </Paper>
           </TabPanel>
           <TabPanel value="5">
             <Paper>
