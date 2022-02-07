@@ -44,6 +44,9 @@ jobs:
 
     - name: Download all workflow run artifacts
       uses: actions/download-artifact@v2
+      with:
+        name: output-json-data
+        path: ./app/src/data
 
     - name: python exec
       working-directory: ./app
@@ -52,7 +55,7 @@ jobs:
         LANG: C.UTF-8
         PYTHONUSERBASE: ./pip_modules
       run: |
-        pip install pymlask --user
+        pip install pymlask
         python ./src/script/analyzeSentiment.py
     # - name: Simple commit
     #   uses: zwaldowski/git-commit-action@v1
