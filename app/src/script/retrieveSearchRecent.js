@@ -32,7 +32,7 @@ async function getRequest(target) {
     if (res.body) {
         return res.body;
     } else {
-        throw new Error('Unsuccessful request');
+        throw new Error(`Unsuccessful request:${id}`);
     }
 }
 
