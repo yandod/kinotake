@@ -21,12 +21,6 @@ import Vim from './data/vim.json';
 import { TwitterTweetEmbed } from 'react-twitter-embed';
 import ChartData from './ChartData';
 
-function dateFormat(dateString: string) {
-  const date = new Date(Date.parse(dateString));
-  return date.toISOString().slice(0, 10);
-}
-
-
 const series = {
     kinotake: [
       Takenoko.meta.total_tweet_count,

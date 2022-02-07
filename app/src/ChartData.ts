@@ -1,10 +1,3 @@
-import Kinoko from './data/kinoko.json';
-import Takenoko from './data/takenoko.json';
-import KinokoPoplar from './data/kinokoPopular.json';
-import TakenokoPoplar from './data/takenokoPopular.json';
-import KinokoEmotion from './data/kinokoEmotion.json';
-import TakenokoEmotion from './data/takenokoEmotion.json';
-
 
 class ChartData {
     static dateFormat(dateString: string) {
