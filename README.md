@@ -29,7 +29,7 @@ make install
 ```
 ## run backend scripts
 
-This operation consume monthly tweet cap.
+Hitting Twitter API and update local json files. This operation consume monthly tweet cap.
 
 ```sh
 make update
@@ -37,10 +37,19 @@ make update
 
 ## run app on local machine
 
+Serve static site based on local json files produced on previous step.
 local dev server listen port 3000 by default. if this port is occupied by other service, tweak setting on `docker-compose.yml`
 
 ```sh
 make start
+```
+
+## access to app
+
+navigate to url to see generated website.
+
+```sh
+http://localhost:3000
 ```
 
 # Usage without Make
@@ -70,4 +79,10 @@ local dev server listen port 3000 by default. if this is occupied by other servi
 ```sh
 docker compose run --service-ports node npm start
 ```
+## access to app
 
+navigate to url to see generated website.
+
+```sh
+http://localhost:3000
+```
