@@ -8,7 +8,7 @@ services:
     ports:
       - 3000:3000
     environment:
-      - BEARER_TOKEN=
+      - BEARER_TOKEN=<your_bearer_token>
   python:
     image: intimatemerger/mecab-ipadic-neologd
     working_dir: /var/www/html
