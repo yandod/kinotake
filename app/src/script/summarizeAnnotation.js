@@ -20,11 +20,11 @@ function findPopular (target){
         }
         node.context_annotations.forEach((context) => {
             // skip vertical
-            if (context.domain.name.includes(' Vertical')) {
+            if (context.domain.name.includes('Brand Vertical')) {
                 return;
             }
             // skip category
-            if (context.domain.name.includes(' Category')) {
+            if (context.domain.name.includes('Brand Category')) {
                 return;
             }
             if (context.entity.name in result) {
