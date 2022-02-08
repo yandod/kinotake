@@ -1,5 +1,5 @@
 # kinotake
-"Kinoko　no yama"(きのこの山) or "Takenoko no sato"(たけのこの里) on social media?
+"Kinoko no yama"(きのこの山) or "Takenoko no sato"(たけのこの里) on social media?
 
 - [demo site](https://yandod.github.io/kinotake/)
 
