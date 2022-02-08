@@ -3,12 +3,18 @@
 
 - [demo site](https://yandod.github.io/kinotake/)
 
-# prerequirement 
-
+# Prerequisites 
+- Twitter API Essential Access
+- A Project and an App created in the dashboard
 - docker (tested on version 20.10.12)
 - Make (tested on GNU Make 3.81) *optional
-- valid BEARER_TOKEN set in `docker-compose.yml`
-  - this app will consume 200 tweets from monthly tweet cap per backend script run.
+- replace `<your_bearer_token>` with your own bearer token without the `<` `>`. in `docker-compose.yml`
+```
+    environment:
+      - BEARER_TOKEN=<your_bearer_token>
+```
+- this app will consume 200 tweets from monthly tweet cap per backend script run.
+  - tested with Elevated accesss
 
 # Usage
 
